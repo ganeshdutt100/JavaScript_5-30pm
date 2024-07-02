@@ -3,11 +3,17 @@
   //  }
 
 
-  // var variableName = "hello world";
-  // document.writeln(variableName);
+  var variableName = "hello world";
+  document.writeln(variableName);
 
-  //  var variableName = "Surya"
-  //  document.writeln(variableName);
+    variableName = "Surya"
+   document.writeln(variableName);
+
+   var variableName = 20;
+   document.writeln(variableName);
+   
+  let  a   = "hello world";
+let A = "hello world";
 
   //  var variableName = "Pankaj "
   //  document.writeln(variableName);
@@ -37,26 +43,26 @@
 
 
 
-{
-  var a = "i am var "
+// {
+//   var a = "i am var "
 
- }
-document.writeln(a);
-document.writeln('<br>');
+//  }
+// document.writeln(a);
+// document.writeln('<br>');
 
 
 
-{
-  let a = "i am let "
-document.writeln(a);
+// {
+//   let a = "i am let "
+// document.writeln(a);
 
- }
- 
-{
-  const  a = "i am Const "
-document.writeln(a);
+//  }
 
- }
+// {
+//   const  a = "i am Const "
+// document.writeln(a);
+
+//  }
 
  
   
