@@ -91,4 +91,35 @@ document.writeln(++a , " :  increment " , '<br>' );
 document.writeln(--a , " :  Decrement " , '<br>' );
 
 
+document.writeln('<br>' );
 
+// Relational Operators
+
+let rel1 = 20;
+let rel2 = "20";
+document.writeln(rel1 == rel2);
+document.writeln(rel1 > rel2);
+document.writeln(rel1 < rel2);
+document.writeln(rel1 <= rel2);
+document.writeln(rel1 >= rel2);
+document.writeln(rel1 !== rel2);
+document.writeln('<br>' );
+
+document.writeln(rel1 === rel2);
+document.writeln(rel1 == rel2);
+
+document.writeln('<br>' );
+document.writeln('<br>' );
+document.writeln('<br>' );
+document.writeln('<br>' );
+
+// Logical Operators
+// And(&&) , or(||)  , not(!) 
+
+   let js = true;
+   let CSS = false;
+    
+
+document.writeln( js && CSS);
+document.writeln( js || CSS);
+document.writeln( !js);
