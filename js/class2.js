@@ -65,3 +65,30 @@ document.writeln(Array[2]);
 // Date
 let currentDate = new Date();
 document.writeln(currentDate);
+
+// null and undefined
+
+let Ganesh;
+document.writeln(Ganesh);
+
+// a + b = c
+
+
+// Arithmetic Operators
+// +,-,*,/,%,++,--
+ document.writeln('<br>' );
+ 
+
+let a = 40;
+let b = 50;
+
+document.writeln(a + b , " :  Sum "  , '<br>' );
+document.writeln(a  * b , " :  multiplication " , '<br>' );
+document.writeln(a  / b , " :  Divison " , '<br>' );
+document.writeln(a - b , " :  Sub " , '<br>' );
+document.writeln(a % b , " :  Modulus " , '<br>' );
+document.writeln(++a , " :  increment " , '<br>' );
+document.writeln(--a , " :  Decrement " , '<br>' );
+
+
+
