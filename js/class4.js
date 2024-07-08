@@ -16,16 +16,16 @@
 // }
 
 
-let a = 3;
+let a = 6;
 
 switch(a){
-    case 1: document.writeln("Monday"); break;
-    case 2: document.writeln("Tue");   break;
-    case 3: document.writeln("Wed");break;
-    case 4: document.writeln("Thur");break;
-    case 5: document.writeln("Fri");break;
-    case 6: document.writeln("Sat");break;
-    case 7: document.writeln("Sunday");break;
+    case 1: 
+    case 2: 
+    case 3: 
+    case 4: 
+    case 5: document.writeln("Weekdays");break;
+    case 6: 
+    case 7: document.writeln("weekend");break;
 
     default: document.writeln("Invalid Day");
     
