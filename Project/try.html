@@ -1,22 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HTML</title>
-  <style>
-    #demo {
-      color: green;
-    }
-  </style>
+  <title>Document</title>
 </head>
-
 <body>
-  <p id="Ganesh">Ganesh </p>
-</body>
-<script>
-  document.getElementById("Ganesh").innerText = "Ganesh Dutt"
-</script>
 
+    <p id="para">loading.....</p>
+
+    <button onclick="Dipak()">Click me </button>
+
+ <script>
+
+  let Neelu =  document.getElementById('para')
+  
+ function Dipak(){
+        Neelu.innerText = "I am Neelu"
+ }
+
+
+   let a = 20 ;   
+   let op = "/";  
+  let b = 30;   
+
+ 
+  switch(op){
+   case "+" : console.log(a+b ); break ;
+   case "-" : console.log(a-b ); break ;
+   case "*" : console.log(a*b ); break ;
+   case "/" : console.log(a/b ); break ;
+   default: console.log("Invalid");
+   
+  }
+  
+ </script>
+</body>
 </html>
