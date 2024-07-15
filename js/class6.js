@@ -12,12 +12,23 @@ document.writeln("<br>");
 //   ("Hello world!");
 // };
 
-let fun = function (a, b) {
-  return a + b;
-};
+// let fun = function (a, b) {
+//   return a + b;
+// };
 
-let output = fun(10, 50);
-document.writeln(fun(90, 50));
+// let output = fun(10, 50);
+// document.writeln(fun(90, 50));
 
-document.writeln(output);
-git;
+// document.writeln(output);
+
+// (function () {
+//   document.writeln("Hello world!");
+// })();
+
+// function fun() {
+//   document.writeln("  Hello world!");
+// }
+
+let afun = () => document.writeln("hello world!");
+
+afun();
