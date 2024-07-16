@@ -29,6 +29,21 @@ document.writeln("<br>");
 //   document.writeln("  Hello world!");
 // }
 
-let afun = () => document.writeln("hello world!");
+// let afun = () => {
+//   document.writeln("hello world!");
+//   document.writeln("hello pankaj");
+// };
 
-afun();
+// afun();
+
+// document.writeln("<br>");
+
+// let name = "Dipak";
+
+// let str = `hello ${name} how are you`;
+// document.writeln(str);
+
+function fun(name) {
+  document.writeln(`Hello ${name}`);
+}
+fun.call(null, "Dipak");
