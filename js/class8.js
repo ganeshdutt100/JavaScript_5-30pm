@@ -15,18 +15,32 @@ document.writeln("Class 8 Object");
 //   document.writeln(x + " : " + person[x] + "<br>");
 // }
 
-class classNAMe {
-  constructor(name, age, job) {
-    this.name = name;
-    this.age = age;
-    this.job = job;
-  }
+// class classNAMe {
+//   constructor(name, age, job) {
+//     this.name = name;
+//     this.age = age;
+//     this.job = job;
+//   }
+// }
+
+// document.writeln("<br>");
+
+// let person1 = new classNAMe("John", 30, "Developer");
+
+// for (let x in person1) {
+//   document.writeln(x + " : " + person1[x] + "<br>");
+// }
+
+function funName(name, age, job) {
+  return {
+    name: name,
+    age: age,
+    job: job,
+  };
 }
 
-document.writeln("<br>");
+let person = funName("john", 20, "Developer");
 
-let person1 = new classNAMe("John", 30, "Developer");
-
-for (let x in person1) {
-  document.writeln(x + " : " + person1[x] + "<br>");
+for (let x in person) {
+  document.writeln(x + " : " + person[x] + "<br>");
 }
