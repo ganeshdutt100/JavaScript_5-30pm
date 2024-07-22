@@ -22,6 +22,18 @@ do {
   c++;
 } while (c <= 10);
 
+document.writeln("<br>");
+
+let a = prompt("Enter your Number : ");
+for (let i = 1; i <= 10; i++) {
+  document.writeln(a + " * " + i + " = " + a * i + "<br>");
+}
+
+// 2 * 1;
+// 2 * 2;
+// 2 * 3;
+// 2 * 4;
+
 // 2*1=2
 // 2*2=4
 // 2*3=6
