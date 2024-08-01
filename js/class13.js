@@ -28,8 +28,10 @@ console.log(a);
 // splice(start , deleteCount , add)
 // fruits.splice(1, 0, "grape", "melon");
 // a.pop();
-// let num = [9, 7, 5, 0, 3, 2, 6];
-// num.sort();
+let num = [94, 7, 1, 0, 13, 2, 63];
+num.sort();
+console.log(num);
+
 // a.push("Hello");
 
 // a.shift();
