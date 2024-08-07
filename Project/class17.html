@@ -16,18 +16,72 @@
     </style>
 </head>
 <body>
+    <!-- <p id="demo" >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam repellat quod magnam voluptas placeat dolore ullam! Nostrum possimus, eos in dicta nisi voluptatem aspernatur natus quibusdam, quidem dolorum sed nulla.</p>
+
     <p id="demo" >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam repellat quod magnam voluptas placeat dolore ullam! Nostrum possimus, eos in dicta nisi voluptatem aspernatur natus quibusdam, quidem dolorum sed nulla.</p>
-    <button onclick="fun()">Click me </button>
+    <button onclick="fun()">Click me </button> -->
+
+
+    <div class="div1">Lorem ipsum dolor sit amet.</div>
+
+    <div class="div1">Lorem ipsum dolor sit amet.</div>
+    <div class="div1">Lorem ipsum dolor sit amet.</div>
+    <div class="div1">Lorem ipsum dolor sit amet.</div>
+
+    <div class="div1">Lorem ipsum dolor sit amet.</div>
+
+
+    <div id="div2">Lorem ipsum dolor sit amet. first</div>
+
+    <div id="div2">Lorem ipsum dolor sit amet.</div>
 
 
     <script>
-        function fun(){
+  let b =  document.getElementById('div2');
+  console.log(b.innerHTML);
+//   console.log(b.length);
+  
+   
+   let a = document.getElementsByClassName("div1")
+   console.log(a.length);
+   
 
-            let a =  document.getElementById('demo');
+    //     function fun(){
+
+    //         let a =  document.getElementById('demo');
             
-    //  document.getElementById('demo').innerText= "Hello world"
-        a.classList.add('mainClass');
-        }
+    // //  document.getElementById('demo').innerText= "Hello world"
+    //     a.classList.add('mainClass');
+    //     }
     </script>
+
+
+<script>
+// function fun(name){
+//     console.log(name);
+        
+//     }
+// let p = "Ganesh "
+// fun(p)
+    // let UserName  = fun("Ganesh");
+    // console.log(UserName);
+    
+
+// let a1 = 10
+// let b2 = 20
+
+// console.log(fun(a1,b2));
+
+</script>
+
+
+<p>Lorem ipsum dolor sit amet. </p>
+<p>Lorem ipsum dolor sit amet. </p>
+<p>Lorem ipsum dolor sit amet. </p>
+<p>Lorem ipsum dolor sit amet. </p>
+   <script>
+    let aa = document.getElementsByTagName('p')
+    console.log(aa.length);
+   </script>
 </body>
 </html>
