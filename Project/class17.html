@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .mainClass{
+            color: yellow;
+            font-size: 20px;
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <p id="demo" >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam repellat quod magnam voluptas placeat dolore ullam! Nostrum possimus, eos in dicta nisi voluptatem aspernatur natus quibusdam, quidem dolorum sed nulla.</p>
+    <button onclick="fun()">Click me </button>
+
+
+    <script>
+        function fun(){
+
+            let a =  document.getElementById('demo');
+            
+    //  document.getElementById('demo').innerText= "Hello world"
+        a.classList.add('mainClass');
+        }
+    </script>
+</body>
+</html>
