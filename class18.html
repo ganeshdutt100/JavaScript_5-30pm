@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cal{
+            width: 300px;
+            height: 420px;
+            background-color: black;
+            padding: 30px 10px 0px 10px;
+            border-radius: 10px;
+            margin: 10px auto;
+            text-align: center;
+        }
+        button{
+           
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            color: black;
+            border: none;
+            font-size: 20px;
+            margin: 10px 5px;
+            cursor: pointer;
+            border-radius: 50%;
+            font-weight: bold;
+            font-family: sans-serif !important;
+        }
+        button:hover{
+            background-color: gray;
+            color: white;
+        }
+        button:active{
+            color: yellow;
+        }
+        input{
+            margin-bottom: 10px;
+            padding: 15px 4px;
+            border-radius: 25px;
+            outline: none;
+            font-weight: bold;
+            font-size: 16px;
+            /* border: none; */
+        }
+        .btnColor{
+            background-color: orange;
+            color: white;
+        }
+        .btnColor:hover{
+           color: orange;
+            background-color: white;
+        }
+        .ZERO{
+           width: 120px;
+           height: 50px;
+           border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="cal">
+        <input type="text" placeholder="Result" readonly id="result" size="28"> <br>
+
+        <button >AC</button>
+        <button >N</button>
+
+        <button >%</button>
+        <button class="btnColor" >/</button>
+
+
+        
+        <button >7</button>
+        <button >8</button>
+        <button >9</button>
+        <button class="btnColor" >*</button>
+
+
+        <button >4</button>
+        <button >5</button>
+        <button >6</button>
+        <button class="btnColor" >-</button>
+
+
+        <button >1</button>
+        <button >2</button>
+        <button >3</button>
+        <button class="btnColor" >+</button>
+
+       
+        
+        <button class="ZERO">0</button>
+        <button >.</button>
+ 
+        <button class="btnColor" >=</button>
+
+    </div>
+
+    <script>
+        let result =  document.getElementById('result');
+        
+
+        let btn = Array.from(document.querySelectorAll('button'));
+
+        // console.log(btn);
+
+        btn.map( (x) =>{
+            x.addEventListener('click',()=>{
+                let btnText = x.innerText;
+
+                if(btnText === "="){
+                    result.value = eval(result.value)
+                }
+                else if(btnText === "c"){
+                    result.value = "";
+                }
+                else if(btnText === "N"){
+                    result.value = result.value.slice(0,-1);
+                }
+                else{
+                    result.value += btnText;
+                }
+   
+   
+            });
+        })
+        
+    </script>
+</body>
+</html>
