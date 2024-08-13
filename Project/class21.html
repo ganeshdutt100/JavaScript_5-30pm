@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>CreateElement </p>
+    <div class="container">
+        <p id="newPara">
+      Lorem ipsum dolor sit amet.
+        </p>
+    </div>
+
+    <script>
+        let container = document.querySelector('.container');
+
+        // let para = document.createElement('p');
+        // para.innerText = "This is a new paragraph"
+
+        // container.appendChild(para)
+
+         let newPara = document.getElementById('newPara');
+
+         container.removeChild(newPara);
+        
+    </script>
+</body>
+</html>

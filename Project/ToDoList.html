@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .todo{
+        width: 300px;
+        height: 400px;
+        padding: 20px;
+        background-color: #000;
+        margin: auto;
+        border-radius:10px ;
+        color: white;
+
+       }
+        input{
+            width: 200px;
+            padding: 10px;
+            border-radius: 10px;
+            outline: none;
+        }
+        button{
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: white;
+            color: black;
+        }
+        button:active{
+            background-color: yellow;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="todo">
+    <input type="text" id="myInput" placeholder="Enter your task here...">
+    <button onclick="todo()">ADD</button>
+
+
+    <ul class="list"></ul>
+</div>
+
+<script>
+    function todo(){
+let Input =  document.getElementById('myInput');
+    let lists = document.querySelector('.list');
+
+    let itemList = document.createElement('li');
+    itemList.innerText = Input.value;
+    lists.appendChild(itemList)
+
+    Input.value = "";
+
+
+    }
+</script>
+
+</body>
+</html>
