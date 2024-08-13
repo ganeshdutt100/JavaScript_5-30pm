@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            text-align: center;
+        }
+        input{
+            padding: 10px;
+            border-radius: 10px;
+            outline: none;
+        }
+        .btn{
+            padding: 10px 20px;
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .btn:hover{
+            color: blue;
+            background-color: white;
+            border: 1px solid blue;
+        }
+        .card{
+            width: 300px;
+            height: 100px;
+            margin: 20px auto;
+            text-align: center;
+            background-color: #f1f1f1;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <form>
+    <input type="text" id="myInput">
+    <input type="submit" class="btn">
+</form>
+
+<div class="card">
+    <h1>Neelu</h1>
+    <p>$$</p>
+    
+</div>
+<div class="card">
+    <h1>Nikhil</h1>
+    <p>&&</p>
+</div>
+<div class="card">
+    <h1>Pankaj</h1>
+    <P>13</P>
+</div>
+<div class="card">
+    <h1>Ganesh</h1>
+    <P>pankaj</P>
+</div>
+
+
+<script>
+    let Input =  document.getElementById('myInput');
+  
+    
+
+    Input.addEventListener('keydown',() =>{
+        let value1 = Input.value.toLowerCase();
+
+        let cards = document.querySelectorAll('.card')
+
+        cards.forEach((x)=>{
+            let name = x.textContent.toLowerCase();
+            // console.log(name);
+
+            if(name.includes(value1)){
+                x.style.display= 'block'
+            }
+            else{
+                x.style.display= 'none'
+            }
+            
+        })
+
+        
+
+
+        // console.log(value1);
+        
+    })
+    
+</script>
+</body>
+</html>
