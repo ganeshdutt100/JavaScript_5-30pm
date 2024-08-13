@@ -37,6 +37,7 @@
             background-color: yellow;
             color: black;
         }
+       
     </style>
 </head>
 <body>
@@ -45,7 +46,9 @@
     <button onclick="todo()">ADD</button>
 
 
-    <ul class="list"></ul>
+    <ul class="list">
+        <!-- <li>hey <button>Delete</button> </li> -->
+    </ul>
 </div>
 
 <script>
@@ -53,12 +56,29 @@
 let Input =  document.getElementById('myInput');
     let lists = document.querySelector('.list');
 
-    let itemList = document.createElement('li');
+    if(Input.value.trim() !== ''){
+        let itemList = document.createElement('li');
+
+      
+
     itemList.innerText = Input.value;
     lists.appendChild(itemList)
 
-    Input.value = "";
+    let delelteButton = document.createElement('button');
 
+    delelteButton.innerText = "Delete";
+
+itemList.appendChild(delelteButton)
+
+    
+
+    Input.value = "";
+    }
+
+    else{
+        alert('Please enter task')
+       
+    }
 
     }
 </script>
