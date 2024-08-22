@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1  style="text-align: center;">Class 21</h1>
+
+    <p id="demo"></p>
+    <button onclick="alertMssg()">Aler </button>
+    <button onclick="confirmMssg()">Confirm </button>
+
+    <script>
+        function alertMssg(){
+            alert("Hello World!");
+           
+        }
+
+        function confirmMssg(){
+          let result =   confirm
+            (" Are you sure you want to open this browser?");
+
+            if(result){
+
+                 document.getElementById('demo').innerHTML = 'User clicked OK'
+                
+                // document.writeln('User clicked OK');
+
+                console.log('User clicked OK');
+                
+                
+            }
+            else{
+                // document.writeln('User clicked Cancel');
+                 document.getElementById('demo').innerHTML ='User clicked Cancel'
+                
+                console.log('User clicked Cancel');
+                
+            }
+           
+        }
+
+
+
+        // let a = prompt("Enter your Name:  ")
+        // alert(a)
+        
+    </script>
+</body>
+</html>
