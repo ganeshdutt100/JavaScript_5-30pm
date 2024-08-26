@@ -12,6 +12,12 @@
     <button onclick="alertMssg()">Aler </button>
     <button onclick="confirmMssg()">Confirm </button>
 
+
+
+    <button onclick="greet()">Greet</button>
+    
+    <p id="timer">loading...</p>
+
     <script>
         function alertMssg(){
             alert("Hello World!");
@@ -46,7 +52,44 @@
 
         // let a = prompt("Enter your Name:  ")
         // alert(a)
+  
+
+
+//  setTimeout(function , time);
+
+        // let a  = setTimeout(()=>{
+        //     console.log('Hello World')
+            
+        // },3000);
+
+
+
+     
+
+     let time = setInterval( ()=>{
+        let nowTime = new Date()
+
+
+        let timer1 = nowTime.toLocaleTimeString(); 
+
+// console.log(date.toLocaleTimeString())
+
+ document.getElementById('timer').innerHTML = timer1;
+
+     },1000)
+
+
         
+
+        // Error 
+//         function greet() {
+//  console.log("Hello,  !");
+//     // alert("SetTime out" )
+// }
+//         let output = setTimeout(greet,5000);
+      
     </script>
 </body>
 </html>
+
+
