@@ -6,6 +6,11 @@
     <title>Document</title>
 </head>
 <body>
+
+    <button onclick="openFunction()">Link</button>
+    <button onclick="goBack()">goBack</button>
+    <button onclick="goForward()">goForward</button>
+    <button onclick="goJump()">goJump</button>
     <script>
        
 console.log("User Agent:", window.navigator.userAgent); 
@@ -24,6 +29,31 @@ console.log("Cookies Enabled:", window.navigator.cookieEnabled ? "Yes" :
 // Checking online status 
 console.log("Online Status:", window.navigator.onLine ? "Online" : "Offline");
         
+
+
+
+
+console.log(window.screen.width);
+console.log(window.screen.height);
+console.log(window.screen.availWidth);
+console.log(window.screen.availHeight);
+console.log(window.screen.colorDepth);
+
+
+function openFunction(){
+    window.open("https://www.youtube.com/", "_self");
+}
+
+document.writeln(window.history.length);
+function goBack(){
+    window.history.back();
+}
+function goForward(){
+    window.history.forward();
+}
+function goJump(){
+    window.history.go(4);
+}
     </script>
 </body>
 </html>
