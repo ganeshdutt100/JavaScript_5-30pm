@@ -6,10 +6,41 @@
     <title>Document</title>
 </head>
 <body>
+    <p id="demo">loading....</p>
     <script>
-       let myPromise =  new Promise((resolve , reject)=>{
+     
+      function fun(result){
+         document.getElementById('demo').innerHTML=  result;
+        
+      }
+
+
+      let promsie =  new Promise((resolve , reject)=>{
+       let number = 10;
+
+       if(number == 10){
+        resolve("Data Match")
+       }
+       else{
+        reject("Data Not Match")
+       }
+      })
+
+
+      promsie.then(
+        function(value){
+            fun(value)
+        },
+        function(error){
+            fun(error)
+        }
+      );
+
+
+
+    //    let myPromise =  new Promise((resolve , reject)=>{
   
-       })
+    //    })
        
 
        // pending
