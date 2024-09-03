@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let Neelu = new Promise((a,b)=>{
+            setTimeout(()=>{
+                a("Neelu is a good girl")
+            },2000)
+        }).then((value)=>{
+            console.log("Neelu says: ", value)
+            return new Promise((a,b)=>{
+                setTimeout(()=>{
+                    a("She is also a smart girl")
+                },1000)
+            })
+        }).then((value)=>{
+            console.log(value);
+            return new Promise((a,b)=>{
+                setTimeout(()=>{
+                    a("She is also a beautiful girl")
+                },2000)
+            })
+            
+        }).then((value)=>{
+            console.log(value);
+            
+        });
+
+        // Neelu.then()
+    </script>
+</body>
+</html>
