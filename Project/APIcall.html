@@ -20,11 +20,7 @@
             border-radius: 10px;
             color: white;
         }
-        .container img {
-            width: 100px;
-            height: 100px;
-            margin: 5px;
-        }
+        
     </style>
 </head>
 <body>
@@ -75,3 +71,12 @@
                 console.log("Search Successful");
             });
         });
+
+
+        searchMoreBtn.addEventListener('click', () => {
+            page++;
+            SearchImage().then(() => {
+                console.log("Search More Successful");
+            });
+        });
+    </script>
