@@ -3,79 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Image Search</title>
     <style>
-        form{
+        form {
             text-align: center;
         }
-        input{
+        input {
             padding: 10px;
             margin: 10px;
-            border-radius:10px ;
+            border-radius: 10px;
         }
-        button{
+        button {
             padding: 10px 20px;
-             background-color: tomato;
-             border: none;
-             border-radius: 10px;
-             color: white;
+            background-color: tomato;
+            border: none;
+            border-radius: 10px;
+            color: white;
+        }
+        .container img {
+            width: 100px;
+            height: 100px;
+            margin: 5px;
         }
     </style>
 </head>
 <body>
     <form action="" id="search-form">
-    <input type="text">
-    <button>Search</button>
-</form>
-<div class="container"></div>
-<button>Serach More</button>
-<script>
-    let accessKey = '8zWSldzmmkYpaPpC6wXNs2k1PZzQFggeCNJQYG6OAsg'
-    let searchForm =  document.getElementById('search-form')
-    
-    let input = document.querySelector('input');
-    let searchResult = document.querySelector('.container');
-    let btn = document.querySelector('button');
+        <input type="text">
+        <button type="submit">Search</button>
+    </form>
+    <div class="container"></div>
+    <button id="search-more">Search More</button>
 
-    let inputData = "";
-    let page = 1;
+    <script>
+        let accessKey = '8zWSldzmmkYpaPpC6wXNs2k1PZzQFggeCNJQYG6OAsg';
+        let searchForm = document.getElementById('search-form');
+        let input = document.querySelector('input');
+        let searchResult = document.querySelector('.container');
+        let searchMoreBtn = document.getElementById('search-more');
 
-     function SearchImage(){
-        return new Promise((resolve, reject) => {
-            inputData = input.value;
-            const url = `https://api.unsplash.com/search/phots?page=${page}&query=${inputData}&client_id=${accessKey}`
+        let inputData = "";
+        let page = 1;
 
-            fetch(url)
-            .then(response => response.json())
-            .then(data =>  {
-                const result =  data.result;
-                if(page  == 1){
-                    searchResult.innerHTML = "";
-                }
-                result.map( x => {
-                 const imageElement  = document.createElement('div');
+        function SearchImage() {
+            return new Promise((resolve, reject) => {
+                inputData = input.value;
+                const url = `https://api.unsplash.com/search/photos?page=${page}&query=${inputData}&client_id=${accessKey}`;
 
-                 imageElement.innerHTML = `<img src="${x.urls.small}">`    
-                 searchResult.appendChild(imageElement)
+                fetch(url)
+                .then(response => response.json())
+                .then(data =>  {
+                    const results = data.results;
+                    if (page == 1) {
+                        searchResult.innerHTML = "";
+                    }
+                    results.map(x => {
+                        const imageElement = document.createElement('div');
+                        imageElement.innerHTML = `<img src="${x.urls.small}">`;    
+                        searchResult.appendChild(imageElement);
+                    });
+                    resolve();
                 })
+                .catch(error => reject(error));
+            });
+        }
 
-
-                resolve();
-            })
-            .catch(error => reject(error))
-        })
-     }
-
-
-     searchForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        page = 1;
-        SearchImage().then(()=>{
-            console.log("Search Successful")
+        searchForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            page = 1;
+            SearchImage().then(() => {
+                console.log("Search Successful");
+            });
         });
-     })
-
-   
-</script>
-</body>
-</html>
