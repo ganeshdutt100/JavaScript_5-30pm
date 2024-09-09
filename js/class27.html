@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input::placeholder{
+            color: rgb(155, 165, 42);
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: rgba(127, 14, 14, 0.5);
+            border-radius:50% ;
+            animation: box 3s linear infinite alternate;
+            filter: blur(20px);
+            position: absolute;
+        }
+        @keyframes box {
+             from {transform: translatey(0);}
+             to {transform: translatey(100%);}  /* The box will move 100px to the right */
+             0%{
+                background-color: blue;
+             }
+             30%{
+                background-color: red;
+               
+             }
+             60%{
+                background-color: aliceblue;
+             }
+             90%{
+                background-color: lightblue;
+
+             }
+             100%{
+                background-color: black;
+             }
+        }
+        .container{
+            display: flex;
+            gap: 20px;
+            flex-direction: column;
+            /* flex-wrap: wrap; */
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            margin: 20px;
+        }
+        .image img{
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+        }
+        @media only screen and (min-width: 668px) {
+         .container{
+            flex-direction: row;
+         }
+         .image img{
+            width: 300px;
+            height: 300px;
+            border-radius: 20%;
+        }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ut hic, officia sit unde numquam, libero veritatis magni animi maxime odio eveniet totam cum. Vitae aperiam distinctio iure mollitia odio!</h1>
+    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ut hic, officia sit unde numquam, libero veritatis magni animi maxime odio eveniet totam cum. Vitae aperiam distinctio iure mollitia odio!</h2>
+    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ut hic, officia sit unde numquam, libero veritatis magni animi maxime odio eveniet totam cum. Vitae aperiam distinctio iure mollitia odio!</h3>
+    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ut hic, officia sit unde numquam, libero veritatis magni animi maxime odio eveniet totam cum. Vitae aperiam distinctio iure mollitia odio!</h3>
+    <input type="text" placeholder="Enter your  name">
+    <div class="box"></div>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus optio veniam eum ipsa odio accusamus laborum dicta quibusdam unde perferendis libero corporis placeat veritatis debitis quis molestias nesciunt, numquam quam!</p>
+    <div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores provident numquam harum optio voluptatem incidunt odio, quos, fugiat nam adipisci sunt qui et minima atque pariatur aut accusantium voluptas praesentium!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores provident numquam harum optio voluptatem incidunt odio, quos, fugiat nam adipisci sunt qui et minima atque pariatur aut accusantium voluptas praesentium!</p>
+    <div>
+
+    </div> -->
+
+    <div class="container">
+        <div class="image">
+            <img src="https://img.freepik.com/free-photo/happy-excited-tourist-shooting-landmarks_1262-18852.jpg?t=st=1725877951~exp=1725881551~hmac=9666d0bb1fb097c2450c4434228187371c2301e585dbfe172bf08ee81ff8c2b1&w=900" alt="">
+        </div>
+        <div class="text">
+            <h1>Lorem ipsum dolor sit amet.
+            </h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum autem ea voluptatum velit quos cupiditate vel. Debitis hic officiis accusantium maxime voluptates. Fuga quis quod rem odit in praesentium cupiditate!</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum autem ea voluptatum velit quos cupiditate vel. Debitis hic officiis accusantium maxime voluptates. Fuga quis quod rem odit in praesentium cupiditate!</p>
+            <button>Click me </button>
+        </div>
+    </div>
+</body>
+</html>
