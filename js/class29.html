@@ -15,15 +15,29 @@
     </style>
 </head>
 <body>
-    <div class="box"></div>
+    <!-- <div class="box"></div> -->
+     <input type="text">
     <script>
-        let box = document.querySelector('.box');
-        box.addEventListener('mouseleave', function(){
-            box.style.backgroundColor = 'blue';
-        });
-        box.addEventListener('mouseup', function(){
-            box.style.backgroundColor = 'black';
-        });
+
+   let Input = document.querySelector('input');
+   Input.addEventListener('keyup', function(){
+       Input.style.backgroundColor ="yellow"
+   });
+   Input.addEventListener('keydown', function(){
+       Input.style.backgroundColor ="lightblue"
+   });
+//    Input.addEventListener('keypress', function(){
+//        Input.style.backgroundColor ="lightblue"
+//    });
+
+
+        // let box = document.querySelector('.box');
+        // box.addEventListener('mouseleave', function(){
+        //     box.style.backgroundColor = 'blue';
+        // });
+        // box.addEventListener('mouseup', function(){
+        //     box.style.backgroundColor = 'black';
+        // });
         // box.addEventListener('dblclick', function(){
         //     box.style.backgroundColor = 'blue';
         // });
