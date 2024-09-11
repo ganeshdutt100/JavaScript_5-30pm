@@ -11,21 +11,26 @@
             background-color: red;
             margin: 100px;
         }
-      
+      p::selection{
+        background-color: yellow;
+        color: black;
+        /* text-decoration: underline; */
+      }
     </style>
 </head>
 <body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat porro doloribus, asperiores maxime, corporis assumenda amet deleniti distinctio necessitatibus expedita similique voluptate esse architecto dicta perferendis ipsam harum cum error?</p>
     <!-- <div class="box"></div> -->
      <input type="text">
     <script>
 
-   let Input = document.querySelector('input');
-   Input.addEventListener('keyup', function(){
-       Input.style.backgroundColor ="yellow"
-   });
-   Input.addEventListener('keydown', function(){
-       Input.style.backgroundColor ="lightblue"
-   });
+//    let Input = document.querySelector('input');
+//    Input.addEventListener('keyup', function(){
+//        Input.style.backgroundColor ="yellow"
+//    });
+//    Input.addEventListener('keydown', function(){
+//        Input.style.backgroundColor ="lightblue"
+//    });
 //    Input.addEventListener('keypress', function(){
 //        Input.style.backgroundColor ="lightblue"
 //    });
