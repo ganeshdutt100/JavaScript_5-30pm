@@ -27,16 +27,24 @@ const Task3 = () => {
   const [newTask, setNewTask] = useState(""); // input
 
   const addTask = () => {
-    setTask([...task, newTask]);
-    setNewTask("");
+    if (newTask.trim()) {
+      setTask([...task, newTask]);
+      setNewTask("");
+    }
   };
 
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      addTask();
+    }
+  };
   return (
     <div style={mainDiv()}>
       <h1>To-Do-List</h1>
       <input
         type="text"
         value={newTask}
+        onKeyUp={handleKeyPress}
         onChange={(e) => setNewTask(e.target.value)}
         style={{ padding: "10px", borderRadius: "10px" }}
         placeholder="Enter your Task here..."
